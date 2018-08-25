@@ -6,7 +6,7 @@ COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 
 RUN chmod +x /entrypoint.sh \
  && chmod g+rwx /var/cache/nginx /var/run /var/log/nginx /etc/nginx \
- && chgrp -R root /var/cache/nginx \
+ && chgrp -R root /var/cache/nginx 
  #&& addgroup nginx root
 
 CMD /entrypoint.sh
