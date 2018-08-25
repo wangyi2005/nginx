@@ -1,5 +1,1 @@
-ADD entrypoint.sh /entrypoint.sh
-ADD server_config.json /v2raybin/config.json
-RUN chmod +x /entrypoint.sh 
-
-CMD /entrypoint.sh
+sed -i "s/your_uuid/$UUID/g" config.json
